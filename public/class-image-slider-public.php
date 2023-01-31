@@ -32,27 +32,24 @@ class Image_slide_Public {
 
 	public function slideshow_shortcode() {
 		$images = get_option( 'slideshow-images', array() );
-      if ( ! $images ) {
-        return;
-      }
-		  ob_start();
-		?>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-            <?php foreach ( $images as $image_id ) :
-                  $image_url = wp_get_attachment_url( $image_id );
-                  ?>
-                    <div class="swiper-slide">
-                      <img src="<?php echo esc_url( $image_url ); ?>" alt="">
-                    </div>
-            <?php endforeach; ?>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-          </div>
-		<?php
-		 
-		 ?>
+		      if ( ! $images ) {
+			return;
+		      }
+			ob_start();
+				?>
+			  <div class="swiper-container">
+			    <div class="swiper-wrapper">
+			    	<?php foreach ( $images as $image_id ) :
+				  $image_url = wp_get_attachment_url( $image_id );
+				  ?>
+				    <div class="swiper-slide">
+				      <img src="<?php echo esc_url( $image_url ); ?>" alt="">
+				    </div>
+			    	<?php endforeach; ?>
+			    </div>
+			    <!-- Add Pagination -->
+			    <div class="swiper-pagination"></div>
+			  </div>
 		
 		<?php
 		  return ob_get_clean();
