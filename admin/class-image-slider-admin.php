@@ -16,10 +16,10 @@ class Image_slide_Admin {
 		$this->version = $version;
 		
 		add_action( 'admin_menu', array( $this, 'add_settings_page' ) );
-    add_action( 'admin_init', array( $this, 'register_settings' ) );
+                add_action( 'admin_init', array( $this, 'register_settings' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_styles' ) );
-    add_action( 'wp_ajax_remove_slideshow_image', array( $this, 'remove_slideshow_image' ) );
+                add_action( 'wp_ajax_remove_slideshow_image', array( $this, 'remove_slideshow_image' ) );
 		add_action( 'wp_ajax_save_slideshow_images', array( $this, 'save_slideshow_images' ) );
 
 	}
@@ -33,7 +33,7 @@ class Image_slide_Admin {
 
 	public function enqueue_scripts() {
     
-    wp_enqueue_media();
+    		wp_enqueue_media();
 		wp_enqueue_script( 'jquery-ui-sortable' );
 		wp_enqueue_script( 'image-slider-admin', plugin_dir_url( __FILE__ ) . 'js/image-slider-admin.js' );
 		wp_localize_script( 'wpslideshow-admin', 'wpslideshow', array(
@@ -44,21 +44,20 @@ class Image_slide_Admin {
 
 	
 	public function add_settings_page() {
-        add_menu_page( 'Slideshow Settings', 'Image Slider', 'manage_options', 'slideshow-settings', array( $this, 'settings_page' ), 'dashicons-images-alt2', 25 );
-    }
+        	add_menu_page( 'Slideshow Settings', 'Image Slider', 'manage_options', 'slideshow-settings', array( $this, 'settings_page' ), 'dashicons-images-alt2', 25 );
+    	}
 
 	public function register_settings() {
-        register_setting( 'slideshow-settings', 'slideshow-images' );
-    }
+        	register_setting( 'slideshow-settings', 'slideshow-images' );
+    	}
 
 	
 	public function settings_page() {
-        if ( !current_user_can( 'manage_options' ) ) {
-            wp_die( 'You do not have permission to access this page.' );
-        }
+		if ( !current_user_can( 'manage_options' ) ) {
+		    wp_die( 'You do not have permission to access this page.' );
+		}
 		include 'html/image-slider-admin-display.php';
-        
-    }
+    	}
    
 	public function save_slideshow_images() {
 		$images = array_map( 'absint', $_POST['images'] );
