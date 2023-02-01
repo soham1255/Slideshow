@@ -28,6 +28,12 @@
                 $( '#slideshow-images' ).on( 'click', '.remove-slideshow-image', function() {
                     $( this ).closest( 'li' ).remove();
                 });
+
+                $('.copy_shoortcode').click(function(){
+                    var copyText = $(this).attr('data-copytxt');
+                    navigator.clipboard.writeText(copyText);
+                    alert("Shorcode Copied");
+                });
            
       }
     }
