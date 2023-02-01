@@ -1,7 +1,3 @@
-<?php
-
-
-?>
 <div class="wrap">
     <h1><?php _e('Slideshow Settings','image-slider'); ?></h1>
     <p><?php _e('Please upload your slider images','image-slider'); ?></p>
