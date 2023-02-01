@@ -29,7 +29,7 @@
         <?php submit_button(); ?>
     </form>
     <p><?php _e( 'To display the slider on your website, please use the following shortcode:', 'image-slider' ); ?></p>
-    <code>[myslideshow]</code>
+    <code class="copy_shoortcode" data-copytxt="[myslideshow]">[myslideshow]</code>
     <p><?php _e( 'You can place this shortcode in your page or post content, or in a widget area.', 'image-slider' ); ?></p>
 </div>
 
