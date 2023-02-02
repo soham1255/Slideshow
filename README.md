@@ -31,5 +31,5 @@ Check out the demo of the Image Slider Plugin here.
 <br>Swiper<br>
 jQuery<br>
 
-**Support**
+**Support**<br>
 If you have any issues with this plugin or need assistance, please contact us at soham1255@gmail.com.
