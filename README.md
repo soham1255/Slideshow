@@ -25,7 +25,7 @@ To display the slider on your website, simply add the following shortcode to you
 This plugin requires WordPress version 4.0 or higher and PHP version 5.6 or higher.
 
 **Demo**<br>
-Check out the demo of the Image Slider Plugin here.
+Check out the demo of the Image Slider Plugin <a href="https://www.dropbox.com/s/ns6iadqtws99a9z/ilATMTQmSF.mp4?dl=0">here </a>.
 
 **Libraries Used**
 <br>Swiper<br>
